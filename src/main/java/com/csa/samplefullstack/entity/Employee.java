@@ -7,12 +7,12 @@ import javax.persistence.*;
 public class Employee {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int employee_id;
+    private Long employee_id;
     private String name;
     private String department;
     private String location;
 
-    public Employee(int employee_id, String name, String department, String location) {
+    public Employee(Long employee_id, String name, String department, String location) {
         this.employee_id = employee_id;
         this.name = name;
         this.department = department;
@@ -22,11 +22,11 @@ public class Employee {
     public Employee() {
     }
 
-    public int getEmployee_id() {
+    public Long getEmployee_id() {
         return employee_id;
     }
 
-    public void setEmployee_id(int employee_id) {
+    public void setEmployee_id(Long employee_id) {
         this.employee_id = employee_id;
     }
 
